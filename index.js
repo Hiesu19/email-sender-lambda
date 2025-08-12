@@ -11,23 +11,23 @@ const TO_EMAIL = process.env.MAIL_TO;
 
 const typeMap = {
 	"reset-password": {
-		title: "Bạn đã được đặt lại mật khẩu",
+		title: "[Hiesu Co.] Tài khoản của bạn đã được đặt lại mật khẩu.",
 		templateFn: generateHTMLResetPassword,
 		dataText: (email, password) => `Mật khẩu mới của bạn là: ${password}`,
 	},
 	"new-user": {
-		title: "Tài khoản mới được tạo",
+		title: "[Hiesu Co.] Chào mừng bạn đến với hệ thống !.",
 		templateFn: generateHTMLNewUser,
 		dataText: (email, password) => `Xin chào ${email},\n\nMật khẩu của bạn là: ${password}`,
 	},
 	"reset-password-dev": {
-		title: "Đặt lại mật khẩu (dev)",
+		title: "[Hiesu Co. -dev] Tài khoản của bạn đã được đặt lại mật khẩu.",
 		templateFn: generateHTMLResetPassword,
-		dataText: (email, password) => `Mật khẩu của bạn là: ${password}`,
+		dataText: (email, password) => `Mật khẩu mới của bạn là: ${password}`,
 		overrideTo: TO_EMAIL,
 	},
 	"new-user-dev": {
-		title: "Tài khoản mới được tạo (dev)",
+		title: "[Hiesu Co. -dev] Chào mừng bạn đến với hệ thống !",
 		templateFn: generateHTMLNewUser,
 		dataText: (email, password) => `Xin chào ${email},\n\nMật khẩu của bạn là: ${password}`,
 		overrideTo: TO_EMAIL,
